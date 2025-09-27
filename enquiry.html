@@ -31,7 +31,8 @@
   <div class="main-content">
     <h2>Post a Job Enquiry</h2>
     <p>Fill out the form below to connect with Hudawi graduates. Our team will reach out to you soon.</p>
-    <form id="enquiryForm">
+    <form name="enquiry" netlify>
+      <input type="hidden" name="form-name" value="enquiry" />
       <div class="form-group">
         <label for="orgName">Organization Name</label>
         <input type="text" id="orgName" name="orgName" required>
@@ -81,28 +82,6 @@
   <footer>
     &copy; 2025 Khidmath. All rights reserved.
   </footer>
-  <script>
-    document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const formData = {
-        orgName: this.orgName.value,
-        contactPerson: this.contactPerson.value,
-        email: this.email.value,
-        jobTitle: this.jobTitle.value,
-        desc: this.desc.value,
-        requirements: this.requirements.value,
-        location: this.location.value,
-        deadline: this.deadline.value
-      };
-      await fetch('/api/enquiry', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(formData)
-      });
-      document.getElementById('enquirySuccess').style.display = 'block';
-      this.reset();
-    });
-  </script>
   <script> window.chtlConfig = { chatbotId: "6543465515" } </script>
 <script async data-id="6543465515" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 </body>
