@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enquiry - Khidmath</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo-link">
+      <img src="Gemini_Generated_Image_pmchw4pmchw4pmch-Photoroom.png" alt="Khidmath Logo" class="header-logo">
+    </a>
+    <div class="header-title-block">
+      <div class="title-accent">Khidmath</div>
+      <div class="header-tagline">Empowering Islamic Values in Work</div>
+    </div>
+    <nav class="header-nav" id="siteNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="enquiry.html" class="nav-link">Enquiry</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('siteNav').classList.toggle('show')">
+      &#9776;
+    </button>
+  </div>
+</header>
+  <div class="main-content">
+    <h2>Post a Job Enquiry</h2>
+    <p>Fill out the form below to connect with Hudawi graduates. Our team will reach out to you soon.</p>
+    <form id="enquiryForm">
+      <div class="form-group">
+        <label for="orgName">Organization Name</label>
+        <input type="text" id="orgName" name="orgName" required>
+      </div>
+      <div class="form-group">
+        <label for="contactPerson">Contact Person</label>
+        <input type="text" id="contactPerson" name="contactPerson" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Contact Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" name="jobTitle" required>
+      </div>
+      <div class="form-group">
+        <label for="desc">Job Description</label>
+        <textarea id="desc" name="desc" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="requirements">Requirements</label>
+        <textarea id="requirements" name="requirements" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="location">Job Location</label>
+        <input type="text" id="location" name="location">
+      </div>
+      <div class="form-group">
+        <label for="deadline">Application Deadline</label>
+        <input type="date" id="deadline" name="deadline">
+      </div>
+      <button type="submit" class="btn">Submit Enquiry</button>
+    </form>
+    <div id="enquirySuccess" style="display:none; margin-top:18px; color:green;">
+      Thank you for your enquiry! We will get in touch soon.
+    </div>
+    <div class="enquiry-tips">
+      <h3>Tips for Applying</h3>
+      <ul>
+        <li>Describe the role and values you expect clearly.</li>
+        <li>Mention any specific skills or certifications.</li>
+        <li>Set realistic timelines for applications.</li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Khidmath. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = {
+        orgName: this.orgName.value,
+        contactPerson: this.contactPerson.value,
+        email: this.email.value,
+        jobTitle: this.jobTitle.value,
+        desc: this.desc.value,
+        requirements: this.requirements.value,
+        location: this.location.value,
+        deadline: this.deadline.value
+      };
+      await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(formData)
+      });
+      document.getElementById('enquirySuccess').style.display = 'block';
+      this.reset();
+    });
+  </script>
+  <script> window.chtlConfig = { chatbotId: "6543465515" } </script>
+<script async data-id="6543465515" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
