@@ -31,7 +31,7 @@
   <div class="main-content">
     <h2>Post a Job Enquiry</h2>
     <p>Fill out the form below to connect with Hudawi graduates. Our team will reach out to you soon.</p>
-    <form name="enquiry" netlify>
+    <form name="enquiry" netlify netlify-honeypot="bot-field" action="/thank-you">
       <input type="hidden" name="form-name" value="enquiry" />
       <div class="form-group">
         <label for="orgName">Organization Name</label>
@@ -86,3 +86,4 @@
 <script async data-id="6543465515" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 </body>
 </html>
+
