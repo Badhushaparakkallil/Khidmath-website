@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Khidmath - Bridging Islamic Talent & Opportunity</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-section {
+      background: linear-gradient(90deg, #1B3C73 75%, #F5C518 100%);
+      color: #fff;
+      padding: 56px 16px 38px 16px;
+      text-align: center;
+      border-radius: 0 0 24px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-highlight {
+      font-weight: bold;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 2px 9px;
+      border-radius: 6px;
+      font-size: 1.07em;
+      margin: 0 2px;
+    }
+    .hero-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 3px solid var(--accent);
+      box-shadow: 0 2px 12px rgba(27, 60, 115, .15);
+    }
+    .hero-buttons {
+      margin: 30px 0 12px 0;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-decoration: none;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 36px;
+    }
+    .stats div {
+      background: #fff;
+      color: var(--primary);
+      border-radius: 12px;
+      padding: 18px 30px;
+      box-shadow: 0 2px 18px rgba(27, 60, 115, 0.09);
+      min-width: 90px;
+    }
+    .features {
+      padding: 40px 0 20px 0;
+      background: var(--background);
+      text-align: center;
+    }
+    .feature-list {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .feature-card {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(27, 60, 115, 0.07);
+      border-radius: 10px;
+      padding: 24px 18px;
+      width: 230px;
+      text-align: center;
+      margin-bottom: 18px;
+      transition: box-shadow .22s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 4px 18px rgba(27, 60, 115, .15);
+    }
+    .feature-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 12px;
+    }
+    .testimonial-section {
+      background: var(--background);
+      padding: 34px 0;
+      text-align: center;
+    }
+    .testimonial-cards {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(27, 60, 115, 0.05);
+      padding: 18px 20px;
+      width: 320px;
+      font-style: italic;
+      margin-bottom: 12px;
+      color: var(--primary);
+      position: relative;
+    }
+    .testimonial-card .author {
+      display: block;
+      margin-top: 12px;
+      font-size: .97em;
+      font-weight: bold;
+      color: var(--primary);
+      font-style: normal;
+    }
+    .cta {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 36px 0;
+      margin-top: 0;
+      text-decoration: none;
+    }
+    .cta h2 {
+      margin-bottom: 16px;
+    }
+    .cta .btn {
+      font-size: 1.15em;
+      padding: 18px 44px;
+      margin-top: 8px;
+      margin-bottom: 6px;
+      text-decoration: none;
+    }
+    .how-it-works {
+      background: #fff;
+      padding: 32px 0 24px 0;
+      text-align: center;
+      border-radius: 18px;
+      margin-top: 32px;
+      box-shadow: 0 2px 20px rgba(27,60,115,.05);
+    }
+    .how-steps {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .how-step {
+      background: var(--background);
+      border-radius: 7px;
+      box-shadow: 0 2px 10px rgba(27,60,115,.08);
+      padding: 18px 14px;
+      width: 170px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .how-step span {
+      display: block;
+      font-size: 2em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .ai-demo {
+      background: #fff;
+      padding: 30px 0;
+      text-align: center;
+      border-radius: 18px;
+      margin-top: 32px;
+      box-shadow: 0 2px 20px rgba(27,60,115,.04);
+      text-decoration: none;
+    }
+    @media (max-width: 900px) {
+      .stats,
+      .feature-list,
+      .testimonial-cards,
+      .how-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+      .hero-section {
+        padding: 34px 8px 24px 8px;
+      }
+    }
+    @media (max-width: 600px) {
+      .main-content,
+      .features,
+      .testimonial-section,
+      .how-it-works,
+      .ai-demo {
+        padding: 12px;
+        margin: 8px;
+      }
+      .stats div,
+      .feature-card,
+      .testimonial-card,
+      .how-step {
+        min-width: unset;
+        width: 92vw;
+        max-width: 350px;
+      }
+      .hero-img {
+        width: 54px;
+        height: 54px;
+      }
+      header img {
+        max-height: 38px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      nav {
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+
+    .sub-title{
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo-link">
+      <img src="Gemini_Generated_Image_pmchw4pmchw4pmch-Photoroom.png" alt="Khidmath Logo" class="header-logo">
+    </a>
+    <div class="header-title-block">
+      <div class="title-accent">Khidmath</div>
+      <div class="header-tagline">Empowering Islamic Values in Work</div>
+    </div>
+    <nav class="header-nav" id="siteNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="enquiry.html" class="nav-link">Enquiry</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('siteNav').classList.toggle('show')">
+      &#9776;
+    </button>
+  </div>
+</header>
+  <div class="hero-section">
+    <h1 class="sub-title">Empowering Islamic Organizations & Talented Graduates</h1>
+    <p>
+      Welcome to <span class="hero-highlight">Khidmath</span>, the bridge between Islamic organizations and exceptional <span class="hero-highlight">Hudawi</span> graduates from Darul Huda Islamic University. 
+      <br>
+      <span style="font-size:1.09em;">Find inspired professionals for your Islamic-valued roles, and let your team thrive with integrity and excellence.</span>
+    </p>
+    <div class="hero-buttons">
+      <a href="enquiry.html" class="btn">Find Employees</a>
+      <a href="services.html" class="btn accent">Explore Services</a>
+      <a href="ai-tool.html" class="btn accent">Try AI Tool</a>
+    </div>
+    <div class="stats">
+      <div>
+        <h3>3000+</h3>
+        <p>Verified Graduates</p>
+      </div>
+      <div>
+        <h3>550+</h3>
+        <p>Organizations Served</p>
+      </div>
+      <div>
+        <h3>98%</h3>
+        <p>Successful Placements</p>
+      </div>
+    </div>
+  </div>
+  <section class="features">
+    <h2>Why Choose Khidmath?</h2>
+    <div class="feature-list">
+      <div class="feature-card">
+        <img src="verify.png" alt="Verified">
+        <h4>Verified Profiles</h4>
+        <p>Graduates are verified by Darul Huda Islamic University, ensuring authenticity and expertise in Islamic education.</p>
+      </div>
+      <div class="feature-card">
+        <img src="ai-technology.png" alt="AI Matching">
+        <h4>Smart AI Matching</h4>
+        <p>Let our AI tool recommend the most suitable candidates for your needs, saving you time and effort.</p>
+      </div>
+      <div class="feature-card">
+        <img src="customer-service.png" alt="Support">
+        <h4>End-to-End Support</h4>
+        <p>We guide both employers and graduates through every step, ensuring a smooth hiring process and great results.</p>
+      </div>
+      <div class="feature-card">
+        <img src="circle.png" alt="Community">
+        <h4>Vibrant Community</h4>
+        <p>Join a growing network of Islamic professionals, mentors, and organizations dedicated to meaningful work.</p>
+      </div>
+    </div>
+  </section>
+  <section class="how-it-works">
+    <h2>How Khidmath Works</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <span>1</span>
+        <strong>Browse Graduates</strong>
+        <p>Explore verified profiles by skills, experience, and values.</p>
+      </div>
+      <div class="how-step">
+        <span>2</span>
+        <strong>Post Job Enquiry</strong>
+        <p>Submit your job requirements and let us find the perfect match.</p>
+      </div>
+      <div class="how-step">
+        <span>3</span>
+        <strong>Get AI Recommendations</strong>
+        <p>Use our AI tool for instant, smart candidate suggestions.</p>
+      </div>
+      <div class="how-step">
+        <span>4</span>
+        <strong>Connect & Hire</strong>
+        <p>Interview, connect and hire with full support from Khidmath.</p>
+      </div>
+    </div>
+  </section>
+  <section class="testimonial-section">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        "Khidmath helped us find dedicated staff who truly understand Islamic values. The process was simple and efficient."
+        <span class="author">- Imam Salim, Al-Falah School</span>
+      </div>
+      <div class="testimonial-card">
+        "Thanks to Khidmath, I found a fulfilling job where I can practice my faith and share my knowledge."
+        <span class="author">- Hafiz Anees, Darul Huda Graduate</span>
+      </div>
+      <div class="testimonial-card">
+        "The AI tool made hiring so much easier. We got recommendations instantly and connected with brilliant candidates!"
+        <span class="author">- Fatima P, HR Manager</span>
+      </div>
+    </div>
+  </section>
+  <section class="cta">
+    <h2>Ready to Build Your Team?</h2>
+    <a href="enquiry.html" class="btn">Post a Job Enquiry</a>
+    <a href="ai-tool.html" class="btn accent">Try AI Match</a>
+  </section>
+  <section class="ai-demo">
+    <h3>Try Our AI Tool!</h3>
+    <p>Let our AI assist you in matching graduates to your organization. <br><em>(Instant recommendations – try it now!)</em></p>
+    <a href="ai-tool.html" class="btn">Open AI Tool</a>
+  </section>
+  <footer>
+    &copy; 2025 Khidmath. All rights reserved.
+  </footer>
+  <script> window.chtlConfig = { chatbotId: "6543465515" } </script>
+<script async data-id="6543465515" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Khidmath</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="main-header">
+  <div class="header-container">
+    <a href="index.html" class="logo-link">
+      <img src="Gemini_Generated_Image_pmchw4pmchw4pmch-Photoroom.png" alt="Khidmath Logo" class="header-logo">
+    </a>
+    <div class="header-title-block">
+      <div class="title-accent">Khidmath</div>
+      <div class="header-tagline">Empowering Islamic Values in Work</div>
+    </div>
+    <nav class="header-nav" id="siteNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="enquiry.html" class="nav-link">Enquiry</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('siteNav').classList.toggle('show')">
+      &#9776;
+    </button>
+  </div>
+</header>
+  <div class="main-content">
+    <h2>Contact Us</h2>
+    <p>Have questions or need support? Reach out to our team, and we’ll respond promptly.</p>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div id="contactSuccess" style="display:none; margin-top:18px; color:green;">
+      Thank you for reaching out! We'll respond soon.
+    </div>
+    <div class="contact-info">
+      <h3>Our Address</h3>
+      <p>
+        Khidmath HQ, Darul Huda Campus,<br>
+        Chemmad, Kerala 676306<br>
+        <strong>Email:</strong> info@khidmath.org<br>
+        <strong>Phone:</strong> +91-98765-43210
+      </p>
+      <h3>Follow Us</h3>
+      <p>
+        <a href="#" target="_blank">Facebook</a> |
+        <a href="#" target="_blank">Twitter</a> |
+        <a href="#" target="_blank">Instagram</a>
+      </p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Khidmath. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        message: this.message.value
+      };
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(formData)
+      });
+      document.getElementById('contactSuccess').style.display = 'block';
+      this.reset();
+    });
+  </script>
+  <script> window.chtlConfig = { chatbotId: "6543465515" } </script>
+<script async data-id="6543465515" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>

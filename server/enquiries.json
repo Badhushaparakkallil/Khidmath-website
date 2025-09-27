@@ -1,0 +1,13 @@
+[
+  {
+    "orgName": "Test Org",
+    "contactPerson": "Test Person",
+    "email": "test@example.com",
+    "jobTitle": "Test Job",
+    "desc": "This is a test job description.",
+    "requirements": "Test Requirements",
+    "location": "Test Location",
+    "deadline": "2025-10-31",
+    "created": "2025-09-27T12:00:00.000Z"
+  }
+]
