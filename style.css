@@ -269,7 +269,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: rgb(3, 19, 171);
+  color: rgb(0, 0, 117)
 }
 
 h1 {
@@ -504,3 +504,4 @@ blockquote {
     gap: 7px;
   }
 }
+
