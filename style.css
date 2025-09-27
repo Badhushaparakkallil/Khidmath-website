@@ -268,11 +268,8 @@ body {
   padding: 34px;
 }
 
-h1, {
+h1, h2, h3 {
   color: white;
-}
-h2, {
-  color: blue;
 }
 
 h1 {
@@ -507,5 +504,3 @@ blockquote {
     gap: 7px;
   }
 }
-
-
