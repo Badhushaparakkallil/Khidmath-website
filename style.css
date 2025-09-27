@@ -272,11 +272,6 @@ h1, h2, h3 {
   color: rgb(3, 3, 70)
 }
 
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.3em;
-}
-
 h2 {
   font-size: 1.6rem;
   margin-bottom: 0.5em;
@@ -504,5 +499,6 @@ blockquote {
     gap: 7px;
   }
 }
+
 
 
