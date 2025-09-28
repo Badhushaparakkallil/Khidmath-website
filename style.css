@@ -31,7 +31,6 @@ body {
   margin-right: 200px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 14px 2vw;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -507,6 +506,7 @@ blockquote {
     gap: 7px;
   }
 }
+
 
 
 
