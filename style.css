@@ -4,7 +4,13 @@
   --background: #F4F8FB;
   --text: #222;
 }
-
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
 .main-header {
   background: linear-gradient(90deg, #1B3C73 78%, #F5C518 100%);
   box-shadow: 0 2px 8px rgba(27, 60, 115, 0.07);
@@ -489,6 +495,7 @@ blockquote {
     gap: 7px;
   }
 }
+
 
 
 
