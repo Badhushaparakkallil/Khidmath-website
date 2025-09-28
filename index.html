@@ -222,22 +222,27 @@
 <body>
   <header class="main-header">
   <div class="header-container">
-    <div class="header-top-row">
+    <div class="header-top">
       <a class="logo-link" href="/">
-        <img class="header-logo" src="logo.png" alt="Logo" />
+        <img class="header-logo" src="logo.png" alt="Khidmath Logo" />
       </a>
       <div class="header-title-block">
         <span class="title-accent">Khidmath</span>
         <span class="header-tagline">Empowering Islamic Values in Work</span>
       </div>
     </div>
-    <nav class="header-nav">
-      <a class="nav-link" href="#">Home</a>
-      <a class="nav-link" href="#">About</a>
-      <a class="nav-link" href="#">Services</a>
-      <a class="nav-link" href="#">Enquiry</a>
-      <a class="nav-link" href="#">Contact Us</a>
-    </nav>
+    <div class="header-nav-row">
+      <button class="nav-toggle" aria-label="Open Navigation" onclick="document.querySelector('.header-nav').classList.toggle('show')">
+        &#9776;
+      </button>
+      <nav class="header-nav">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Services</a>
+        <a class="nav-link" href="#">Enquiry</a>
+        <a class="nav-link" href="#">Contact Us</a>
+      </nav>
+    </div>
   </div>
 </header>
   <div class="hero-section">
@@ -344,6 +349,7 @@
 </body>
 
 </html>
+
 
 
 
