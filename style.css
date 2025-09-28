@@ -28,7 +28,7 @@ body {
   max-width: 1150px;
   margin: 0 auto;
   margin-left: 100px;
-  margin-right: 200px;
+  margin-right: 100px;
   display: flex;
   align-items: center;
   padding: 14px 2vw;
@@ -506,6 +506,7 @@ blockquote {
     gap: 7px;
   }
 }
+
 
 
 
