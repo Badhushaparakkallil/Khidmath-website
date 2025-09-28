@@ -27,7 +27,7 @@ body {
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
-  margin-left: 250px;
+  margin-left: 100px;
   margin-right: 200px;
   display: flex;
   align-items: center;
@@ -507,6 +507,7 @@ blockquote {
     gap: 7px;
   }
 }
+
 
 
 
