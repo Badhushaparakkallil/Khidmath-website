@@ -504,19 +504,8 @@ blockquote {
     flex-direction: column;
     gap: 7px;
   }
-  @media (max-width: 600px) {
-  .main-header {
-    padding-top: 0;
-    padding-bottom: 0;
-    min-height: unset;
-  }
-  .hero-section {
-    padding-top: 22px;
-    padding-bottom: 12px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
 }
+
 
 
 
