@@ -90,6 +90,7 @@ body {
   gap: 11px;
   flex-wrap: wrap;
   transition: max-height 0.3s;
+  margin-top: 0px;
 }
 
 .nav-link {
@@ -498,4 +499,5 @@ blockquote {
     gap: 7px;
   }
 }
+
 
