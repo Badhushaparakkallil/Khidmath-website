@@ -222,27 +222,23 @@
 <body>
   <header class="main-header">
   <div class="header-container">
-    <div class="header-top">
-      <a class="logo-link" href="/">
-        <img class="header-logo" src="logo.png" alt="Khidmath Logo" />
-      </a>
-      <div class="header-title-block">
-        <span class="title-accent">Khidmath</span>
-        <span class="header-tagline">Empowering Islamic Values in Work</span>
-      </div>
+    <a href="index.html" class="logo-link">
+      <img src="Gemini_Generated_Image_pmchw4pmchw4pmch-Photoroom.png" alt="Khidmath Logo" class="header-logo">
+    </a>
+    <div class="header-title-block">
+      <div class="title-accent">Khidmath</div>
+      <div class="header-tagline">Empowering Islamic Values in Work</div>
     </div>
-    <div class="header-nav-row">
-      <button class="nav-toggle" aria-label="Open Navigation" onclick="document.querySelector('.header-nav').classList.toggle('show')">
-        &#9776;
-      </button>
-      <nav class="header-nav">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Services</a>
-        <a class="nav-link" href="#">Enquiry</a>
-        <a class="nav-link" href="#">Contact Us</a>
-      </nav>
-    </div>
+    <nav class="header-nav" id="siteNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="enquiry.html" class="nav-link">Enquiry</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.getElementById('siteNav').classList.toggle('show')">
+      &#9776;
+    </button>
   </div>
 </header>
   <div class="hero-section">
@@ -349,6 +345,7 @@
 </body>
 
 </html>
+
 
 
 
